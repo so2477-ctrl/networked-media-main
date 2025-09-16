@@ -1,0 +1,31 @@
+p {
+    color: rgb(228, 228, 151);
+    background-color: rgb(174, 136, 136);
+    border: solid honeydew 1px;
+    padding: 20px;
+    margin: 10px;
+}
+
+ a href {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: peachpuff
+}
+
+h2 {
+    text-align: center;
+    color: orange;
+    font-size: medium
+}
+
+h3 {
+    text-align: center;
+    color: orange;
+    font-size: medium
+}
+.special {
+    margin-top: 50px;
+}
