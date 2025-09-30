@@ -1,0 +1,55 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Dual Clock</title>
+
+  <script src = "Project2.js"></script>
+  <link rel="stylesheet" href="Project2.css">
+
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; }
+    .app { display:flex; }
+    .panel { flex:1; border:1px solid #ccc; display:flex; flex-direction:column; }
+    .header { display:flex; justify-content:space-between; padding:10px; border-bottom:1px solid #ccc; }
+    .status { padding:5px 10px; border-bottom:1px solid #eee; }
+    .controls { padding:10px; border-top:1px dashed #aaa; }
+  </style>
+</head>
+<body>
+    <div class="app">
+        <!-- James (Seoul) -->
+        <div class="panel">
+        <div class="header">
+            <div><strong>James — Seoul</strong></div>
+            <div id="timeJames">--:--:--</div>
+        </div>
+        <div class="status" id="statusJames">status: calculating...</div>
+        <div class="controls">
+            James — wakeup: <input type="number" id="wakeStartJames" min="0" max="23" value="8">
+            James — bedtime: <input type="number" id="wakeEndJames"   min="0" max="23" value="23">
+        </div>
+        </div>
+
+        <!-- Beebadoobe (New York) -->
+        <div class="panel">
+        <div class="header">
+            <div><strong>Beebadoobe — New York</strong></div>
+            <div id="timeBeebadoobe">--:--:--</div>
+        </div>
+        <div class="status" id="statusBeebadoobe">status: calculating...</div>
+        <div class="controls">
+            Beebadoobe wakeup: <input type="number" id="wakeStartBeebadoobe" min="0" max="23" value="8">
+            Beebadoobe bedtime: <input type="number" id="wakeEndBeebadoobe"   min="0" max="23" value="23">
+            <br><br>
+            
+        </div>
+        </div>
+    </div>
+
+   
+      
+        
+
+   
+</body>
+</html>
