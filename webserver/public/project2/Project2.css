@@ -1,0 +1,488 @@
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/* Main body styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Inter', sans-serif;
+    background: #F2F2F7; 
+    color: #000000; 
+    overflow: hidden; 
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px; 
+    margin: 0;
+    padding: 0;
+}
+
+.iphone-frame {
+    width: 393px;
+    height: 90vh; 
+    max-height: 100vh;
+    background: #F2F2F7;
+    position: relative; 
+    border-radius: 30px;
+    overflow: hidden; 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.status-bar {
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background: #F2F2F7; 
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.single-line-header {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 16px; 
+    background: #F2F2F7;
+    min-height: 60px;
+    flex-shrink: 0;
+}
+
+.nav-bar {
+    height: 44px;
+    display: flex;
+    align-items: center; 
+    padding: 0 16px;
+    background: #F2F2F7;
+    border-bottom: 1px solid #E5E5EA;
+}
+
+
+.back-button {
+    width: 30px;
+    height: 30px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #0088FF; 
+    font-size: 18px; 
+}
+
+
+.nav-title {
+    flex: 1; 
+    text-align: center; 
+    font-size: 17px; 
+    font-weight: 600; 
+    color: #000000; 
+}
+
+
+.nav-button {
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    color: #0088FF; 
+    font-size: 18px; 
+}
+
+
+.chat-header {
+    padding: 8px 16px;
+    background: #F2F2F7; 
+    border-bottom: 1px solid #E5E5EA; 
+}
+
+
+.contact-info {
+    display: flex; 
+    align-items: center;
+    gap: 12px;
+}
+
+
+.contact-avatar {
+    width: 60px; 
+    height: 60px; 
+    border-radius: 30px; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+
+.profile-info-row {
+    padding: 16px;
+    background: #F2F2F7; 
+    border-bottom: 1px solid #E5E5EA;
+    flex-shrink: 0; 
+}
+
+
+.profile-info {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+
+.status-info {
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px;
+}
+
+
+.status {
+    font-size: 14px; 
+    color: #000000;
+    font-weight: 400; 
+}
+
+
+.controls {
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px; /
+}
+
+.control-row {
+    display: flex; 
+    align-items: center; 
+    gap: 8px;
+}
+
+
+.controls input {
+    background: #FFFFFF; 
+    border: 1px solid #E5E5EA; 
+    border-radius: 8px; 
+    padding: 4px 8px; 
+    color: #000000; 
+    font-size: 12px; 
+    width: 45px;
+    text-align: center; 
+}
+
+
+.contact-avatar-large {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 40px; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.contact-details {
+    text-align: center; 
+}
+
+.contact-details h2 {
+    font-size: 17px; 
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0;
+}
+
+.contact-details p {
+    font-size: 12px;
+    color: #8E8E93; 
+    margin: 0; 
+}
+
+.messages-area {
+    flex: 1;
+    padding: 16px;
+    overflow-y: visible;
+    background: #FFFFFF;
+    min-height: 0; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+}
+
+.iphone-frame:nth-child(2) .messages-area {
+    background: #000000; 
+}
+
+.iphone-frame:nth-child(2) .message-received {
+    background: #1C1C1E; 
+    color: #FFFFFF;
+    border-bottom-left-radius: 4px; 
+}
+
+.message-bubble {
+    max-width: 80%; 
+    margin-bottom: 8px; 
+    padding: 12px 16px;
+    border-radius: 18px; 
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.message-sent {
+    background: #008BFF;
+    color: #ffffff; 
+    margin-left: auto; 
+    border-bottom-right-radius: 4px; 
+}
+
+.message-received {
+    background: #E5E5EA;
+    color: #000000;
+    margin-right: auto; 
+    border-bottom-left-radius: 4px; 
+}
+
+.message-time {
+    font-size: 11px; 
+    color: #8E8E93;
+    margin-top: 4px; 
+    text-align: right;
+}
+
+.clock-widget {
+    background: #FFFFFF;
+    border: 2px solid #0088FF; 
+    border-radius: 14px;
+    padding: 16px; 
+    margin: 16px 0;
+    position: relative;
+}
+
+
+.clock-header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Clock Title Styling */
+.clock-title {
+    font-size: 17px;
+    font-weight: 600; 
+    color: #000000; 
+}
+
+/* Clock Time Display */
+.clock-time {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0088FF;
+    font-family: 'SF Mono', monospace;
+}
+
+.clock-status {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 12px;
+    padding: 8px 0; 
+    border-bottom: 1px solid #E5E5EA; 
+}
+
+.clock-controls {
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px; 
+}
+
+.control-label {
+    font-size: 14px;
+    color: #000000;
+    min-width: 80px;
+}
+
+.control-input {
+    background: #FFFFFF;
+    border: 1px solid #E5E5EA; 
+    border-radius: 8px; 
+    padding: 8px 12px;
+    color: #000000;
+    font-size: 14px;
+    width: 60px;
+    text-align: center;
+}
+
+.control-input:focus {
+    outline: none; 
+    border-color: #0088FF;
+    box-shadow: 0 0 0 2px rgba(0, 136, 255, 0.2);
+}
+
+.input-area {
+    padding: 16px;
+    background: #F2F2F7;
+    border-top: 1px solid #E5E5EA; 
+    flex-shrink: 0; 
+}
+
+.input-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px; 
+    background: #FFFFFF;
+    border-radius: 20px; 
+    padding: 8px 12px; 
+    border: 1px solid #E5E5EA;
+}
+
+.input-field {
+    flex: 1; 
+    background: transparent;
+    border: none;
+    color: #000000; 
+    font-size: 16px; 
+    padding: 8px 0; 
+    outline: none;
+    resize: none; 
+    max-height: 100px;
+}
+
+.input-field::placeholder {
+    color: #8E8E93;
+}
+
+.send-button {
+    width: 32px; 
+    height: 32px; 
+    background: #0088FF; 
+    border: none;
+    border-radius: 16px; 
+    color: #ffffff; 
+    font-size: 16px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; 
+    padding: 0;
+}
+
+.send-button img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1); 
+}
+
+.send-button:disabled {
+    background: #333333; 
+    color: #8E8E93; 
+    cursor: not-allowed;
+}
+
+.home-indicator {
+    width: 134px; 
+    height: 5px; 
+    background: #000000;
+    border-radius: 3px;
+    margin: 8px auto; 
+    opacity: 0.3; 
+}
+
+.keyboard {
+    background: #F2F2F7;
+    padding: 0; 
+    flex-shrink: 0;
+}
+
+.keyboard-image {
+    width: 100%; 
+    height: auto;
+    display: block;
+}
+
+.header-left-group {
+    display: flex; 
+    align-items: center; 
+    gap: 8px;
+}
+
+.back-arrow-icon {
+    width: 20px;
+    height: 20px; 
+}
+
+.badge-24 {
+    width: 45px;
+    height: 30px; 
+    background: #0088FF;
+    border-radius: 16px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white; 
+    font-size: 16px; 
+    font-weight: bold; 
+}
+.profile-image {
+    width: 60px; 
+    height: 60px;
+    border-radius: 30px;
+    object-fit: cover; 
+    display: block; 
+}
+
+.time-display {
+    font-size: 14px; 
+    color: #000000;
+    font-weight: 600; 
+    margin-bottom: 4px; 
+}
+
+.video-icon {
+    width: 40px; 
+    height: 30px; 
+}
+
+.plus-button {
+    width: 32px;
+    height: 32px;
+    background: #8E8E93; 
+    border-radius: 16px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: white;
+    font-size: 18px; 
+}
+
+
+.messages-area.with-calltimebaby {
+    position: relative; 
+}
+
+.messages-area.with-calltimebaby::before {
+    content: ''; 
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-image: url('calltimebaby.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    z-index: 999;
+    pointer-events: none;
+}
+
+@media (max-width: 393px) {
+    .iphone-frame {
+        width: 100vw; 
+        height: 100vh;
+        border-radius: 0;
+    }
+}

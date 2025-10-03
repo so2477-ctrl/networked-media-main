@@ -1,55 +1,209 @@
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>Dual Clock</title>
+    <!-- Document metadata and configuration -->
+    <meta charset="UTF-8"> <!-- Character encoding for Korean and English text -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+    <title>James💓 & Beabadobee💓 - iMessage Clock</title> <!-- Page title with emoji -->
 
-  <script src = "Project2.js"></script>
-  <link rel="stylesheet" href="Project2.css">
-
-  <style>
-    body { margin:0; font-family:Arial, sans-serif; }
-    .app { display:flex; }
-    .panel { flex:1; border:1px solid #ccc; display:flex; flex-direction:column; }
-    .header { display:flex; justify-content:space-between; padding:10px; border-bottom:1px solid #ccc; }
-    .status { padding:5px 10px; border-bottom:1px solid #eee; }
-    .controls { padding:10px; border-top:1px dashed #aaa; }
-  </style>
+    <!-- External resource links -->
+    <script src="Project2.js"></script> <!-- JavaScript file for time and status logic -->
+    <link rel="stylesheet" href="Project2.css"> <!-- CSS file for styling -->
 </head>
 <body>
-    <div class="app">
-        <!-- James (Seoul) -->
-        <div class="panel">
-        <div class="header">
-            <div><strong>James — Seoul</strong></div>
-            <div id="timeJames">--:--:--</div>
-        </div>
-        <div class="status" id="statusJames">status: calculating...</div>
-        <div class="controls">
-            James — wakeup: <input type="number" id="wakeStartJames" min="0" max="23" value="8">
-            James — bedtime: <input type="number" id="wakeEndJames"   min="0" max="23" value="23">
-        </div>
+    <!-- James iPhone Interface (Left Side) -->
+    <div class="iphone-frame">
+        <!-- Header section with navigation and contact info -->
+        <div class="single-line-header">
+            <!-- Left side navigation elements -->
+            <div class="header-left-group">
+                <!-- Back button for navigation -->
+                <div class="back-button">
+                    <img src="back-arrow.png" alt="Back" class="back-arrow-icon">
+                </div>
+                <!-- 24 hour indicator badge -->
+                <div class="badge-24">24</div>
+            </div>
+            <!-- Contact profile avatar -->
+            <div class="contact-avatar">
+                <img src="./profile-1.jpg" alt="James" class="profile-image">
+            </div>
+            <!-- Right side navigation elements -->
+            <div class="nav-button">
+                <!-- Real-time clock display for Seoul time -->
+                <div id="timeJames" class="time-display">--:--:--</div>
+                <!-- Video call button -->
+                <img src="Video.png" alt="Video" class="video-icon">
+            </div>
         </div>
 
-        <!-- Beebadoobe (New York) -->
-        <div class="panel">
-        <div class="header">
-            <div><strong>Beebadoobe — New York</strong></div>
-            <div id="timeBeebadoobe">--:--:--</div>
+        <!-- Profile information and status controls -->
+        <div class="profile-info-row">
+            <div class="profile-info">
+                <!-- Status and sleep schedule controls -->
+                <div class="status-info">
+                    <!-- Current awake/sleeping status display -->
+                    <div class="status" id="statusJames">Status: Calculating...</div>
+                    <!-- Sleep schedule input controls -->
+                    <div class="controls">
+                        <!-- Wake up time input (0-23 hours) -->
+                        <div class="control-row">
+                            Wake up <input type="number" id="wakeStartJames" min="0" max="23" value="8">
+                        </div>
+                        <!-- Bed time input (0-23 hours) -->
+                        <div class="control-row">
+                            Bed time <input type="number" id="wakeEndJames" min="0" max="23" value="23">
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact details -->
+                <div class="contact-details">
+                    <h2>James💓</h2> <!-- Contact name with heart emoji -->
+                    <p>Seoul, South Korea</p> <!-- Location information -->
+                </div>
+            </div>
         </div>
-        <div class="status" id="statusBeebadoobe">status: calculating...</div>
-        <div class="controls">
-            Beebadoobe wakeup: <input type="number" id="wakeStartBeebadoobe" min="0" max="23" value="8">
-            Beebadoobe bedtime: <input type="number" id="wakeEndBeebadoobe"   min="0" max="23" value="23">
-            <br><br>
-            
+
+        <!-- Messages conversation area with unique ID for image overlay -->
+        <div class="messages-area" id="messagesAreaJames">
+            <!-- Sent message bubbles (from James to Beebadobee) -->
+            <div class="message-bubble message-sent">
+                Hey
+                
+            </div>
+
+            <div class="message-bubble message-sent">
+                Today was a hectic day I wish you were here :(
+                
+            </div>
+
+            <div class="message-bubble message-sent">
+                Will you be up by 8am yout time to call?
+                
+            </div>
         </div>
+
+        <!-- Text input area for typing new messages -->
+        <div class="input-area">
+            <!-- Input container with buttons and text field -->
+            <div class="input-container">
+                <!-- Plus button for attachments -->
+                <div class="plus-button">+</div>
+                <!-- Text input field for typing messages -->
+                <textarea class="input-field" placeholder="" rows="1"></textarea>
+                <!-- Send button for submitting messages -->
+                <button class="send-button">
+                    <img src="Symbol.png" alt="Send">
+                </button>
+            </div>
         </div>
+
+        <!-- Virtual keyboard display -->
+        <div class="keyboard">
+            <img src="Keyboard.png" alt="iOS Keyboard" class="keyboard-image">
+        </div>
+
+        <!-- iPhone home indicator -->
+        <div class="home-indicator"></div>
     </div>
 
-   
-      
-        
+    <!-- Beebadobee iPhone Interface (Right Side) -->
+    <div class="iphone-frame">
+        <!-- Header section with navigation and contact info -->
+        <div class="single-line-header">
+            <!-- Left side navigation elements -->
+            <div class="header-left-group">
+                <!-- Back button for navigation -->
+                <div class="back-button">
+                    <img src="back-arrow.png" alt="Back" class="back-arrow-icon">
+                </div>
+                <!-- 24 hour indicator badge -->
+                <div class="badge-24">24</div>
+            </div>
+            <!-- Contact profile avatar -->
+            <div class="contact-avatar">
+                <img src="./profile-2.jpg" alt="Beebadobee" class="profile-image">
+            </div>
+            <!-- Right side navigation elements -->
+            <div class="nav-button">
+                <!-- Real-time clock display for New York time -->
+                <div id="timeBeabadoobe" class="time-display">--:--:--</div>
+                <!-- Video call button -->
+                <img src="Video.png" alt="Video" class="video-icon">
+            </div>
+        </div>
 
-   
+        <!-- Profile information and status controls -->
+        <div class="profile-info-row">
+            <div class="profile-info">
+                <!-- Status and sleep schedule controls -->
+                <div class="status-info">
+                    <!-- Current awake/sleeping status display -->
+                    <div class="status" id="statusBeabadoobe">Status: Calculating...</div>
+                    <!-- Sleep schedule input controls -->
+                    <div class="controls">
+                        <!-- Wake up time input (0-23 hours) -->
+                        <div class="control-row">
+                            Wake up <input type="number" id="wakeStartBeabadoobe" min="0" max="23" value="8">
+                        </div>
+                        <!-- Bed time input (0-23 hours) -->
+                        <div class="control-row">
+                            Bed time <input type="number" id="wakeEndBeabadoobe" min="0" max="23" value="23">
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact details -->
+                <div class="contact-details">
+                    <h2>Beebadobee💓</h2> <!-- Contact name with heart emoji -->
+                    <p>New York, America</p> <!-- Location information -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages conversation area with unique ID for image overlay -->
+        <div class="messages-area" id="messagesAreaBeabadoobe">
+            <!-- Received message bubbles (from James to Beebadobee) -->
+            <div class="message-bubble message-received">
+                Hey
+                
+            </div>
+
+            <div class="message-bubble message-received">
+                Today was a hectic day I wish you were here :(
+                
+            </div>
+
+            <div class="message-bubble message-received">
+                Will you be up by 8am yout time to call?
+                
+            </div>
+        </div>
+
+        <!-- Text input area for typing new messages -->
+        <div class="input-area">
+            <!-- Input container with buttons and text field -->
+            <div class="input-container">
+                <!-- Plus button for attachments -->
+                <div class="plus-button">+</div>
+                <!-- Text input field for typing messages -->
+                <textarea class="input-field" placeholder="" rows="1"></textarea>
+                <!-- Send button for submitting messages -->
+                <button class="send-button">
+                    <img src="Symbol.png" alt="Send">
+                </button>
+            </div>
+        </div>
+
+        <!-- Virtual keyboard display -->
+        <div class="keyboard">
+            <img src="Keyboard.png" alt="iOS Keyboard" class="keyboard-image">
+        </div>
+
+        <!-- iPhone home indicator -->
+        <div class="home-indicator"></div>
+    </div>
+
+    
+    
 </body>
 </html>
